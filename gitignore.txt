@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dataset (archivos grandes)
+male-and-female-faces-dataset/
+data/male/*.jpg
+data/male/*.jpeg
+data/male/*.png
+data/female/*.jpg
+data/female/*.jpeg
+data/female/*.png
+
+# Modelos grandes (opcional - considera usar Git LFS)
+# models/*.h5
+# models/*.keras
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Configuraciones locales
+.env
+.env.local
