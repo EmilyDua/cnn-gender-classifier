@@ -9,6 +9,8 @@ from tensorflow import keras
 import numpy as np
 import cv2
 from PIL import Image
+import matplotlib
+matplotlib.use('Agg')  # Backend no interactivo
 import matplotlib.pyplot as plt
 import io
 
@@ -342,6 +344,7 @@ if uploaded_file is not None:
         ax.set_title('Saliency Map - Gradientes de Entrada', fontsize=14, fontweight='bold', pad=20)
         plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
         st.pyplot(fig)
+        plt.close(fig)
         st.info("""
         **Saliency Map:** Muestra los píxeles que más influyen en la predicción mediante el cálculo
         de gradientes. Las regiones más brillantes (rojas/amarillas) son las más importantes para la decisión.
@@ -355,6 +358,7 @@ if uploaded_file is not None:
             ax.set_title('Grad-CAM - Mapa de Activación', fontsize=14, fontweight='bold', pad=20)
             plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
             st.pyplot(fig)
+            plt.close(fig)
             st.info("""
             **Grad-CAM:** Visualiza las regiones de la imagen que activan fuertemente las capas
             convolucionales profundas. Indica qué partes del rostro son más relevantes.
